@@ -16,7 +16,7 @@ public class CILab implements CILabInterface {
 
     @Override
     public boolean detectCapitalUse() {
-        String[] acceptablePatterns = {"[a-z]*", "[A-Z]*", "[A-Z][a-z]*"};
+        String[] acceptablePatterns = {"^[a-z]*$", "^[A-Z]*$", "^[A-Z][a-z]*$"};
         for (int i = 0; i < acceptablePatterns.length; i++){
             Pattern pattern = Pattern.compile(acceptablePatterns[i]);
             Matcher matcher = pattern.matcher(myString);
