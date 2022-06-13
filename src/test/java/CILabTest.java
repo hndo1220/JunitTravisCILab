@@ -59,4 +59,20 @@ public class CILabTest {
         myString.setString("");
         assertTrue(myString.detectCapitalUse());
     }
+
+    // Check that getString method works with empty string
+    @Test
+    public void getStringTest1() {
+        String expected = "";
+        myString.setString(expected);
+        assertEquals(expected, myString.getString());
+    }
+
+    // Check that getString method works with non-empty string
+    @Test
+    public void getStringTest2() {
+        String expected = "NonemptyWord";
+        myString.setString(expected);
+        assertEquals(expected, myString.getString());
+    }
 }
