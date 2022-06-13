@@ -39,17 +39,24 @@ public class CILabTest {
         assertTrue(myString.detectCapitalUse());
     }
 
-    // Check that method returns true when an all-lowercased string has an internal capitalized letter
+    // Check that method returns false when an all-lowercased string has an internal capitalized letter
     @Test
     public void detectCapitalUseTest4() {
         myString.setString("leeTcode");
         assertFalse(myString.detectCapitalUse());
     }
 
-    // Check that method returns true when the all-capitalized string has an internal uncapitalized letter
+    // Check that method returns false when the all-capitalized string has an internal uncapitalized letter
     @Test
     public void detectCapitalUseTest5() {
         myString.setString("UsA");
         assertFalse(myString.detectCapitalUse());
+    }
+
+    // Check that method returns true when string is empty
+    @Test
+    public void detectCapitalUseTest6() {
+        myString.setString("");
+        assertTrue(myString.detectCapitalUse());
     }
 }
